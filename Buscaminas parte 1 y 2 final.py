@@ -51,7 +51,7 @@ def relleno(nver, ver, y, x, f, c, v):#Recorre las casillas cercanas, comprueba 
                         if (y+i, x+j) not in ceros:
                             ceros.append((y+i, x+j))
                     else:
-                        visible[y+i][x+j] = oculto[y+i][x+j]
+                        ver[y+i][x+j] = nver[y+i][x+j]
     return ver
     
 
@@ -98,7 +98,7 @@ def presentacion():#Pantalla
 def menu():#mueve o selecciona la opción del usuario
     
     print()
-    opcion = input("¿W/S/A/D - M - B/V?")
+    opcion = input("¿W/S/A/D - R - B/V?")
     return opcion
 
 def reemplazo(tablero):#Recorre todas las casillas del tablero y si una casilla es "0" cambia el valor por un espacio vacío 
